@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    int zipcode, population, age, touristattractions;
-    char cityname[50];
-    float area, gdp;
+    int zipcode, population, age, touristAttractions;
+    char cityName[50];
+    float area, gdp, populationDensity, gdpPerCapita;
 
     //Introdução ao jogo
     printf("================================\n");
@@ -19,7 +19,7 @@ int main() {
 
     //Cadastrando o nome da cidade
     printf("Digite o nome da cidade:\n");
-    scanf("%s", &cityname);
+    scanf("%s", &cityName);
 
     //Cadastrando a idade da cidade
     printf("Digite a idade da cidade:\n");
@@ -31,7 +31,7 @@ int main() {
 
     //Cadastrando o número de pontos turisticos
     printf("Digite o número de Pontos Turisticos:\n");
-    scanf("%d", &touristattractions);
+    scanf("%d", &touristAttractions);
 
     //Cadastrando o PIB da cidade
     printf("Digite o PIB da cidade:\n");
@@ -39,9 +39,24 @@ int main() {
 
     //Confirmação de Cadastro
     printf("=======CARTA REGISTRADA COM SUCESSO========\n");
-    printf("CEP: %d\n" "CIDADE: %s\n" "IDADE: %d\n" "AREA: %f\n" "PONTOS TURISTICOS: %d\n" "PIB: %f\n", zipcode, cityname, age, area, touristattractions, gdp);
+    printf("CEP: %d\n" "CIDADE: %s\n" "IDADE: %d\n" "AREA: %f\n" "PONTOS TURISTICOS: %d\n" "PIB: %f\n", zipcode, cityName, age, area, touristAttractions, gdp);
+
+    //Calculo Nivel Aventureiro
+    //Calculando a Densidade Populacional
+    printf("\n\n================================\n");
+    printf("CALCULANDO DENSIDADE POPULACIONAL\n");
+    populationDensity = population / area;
+    printf("DENSIDADE POPULACIONAL: %f\n", populationDensity);
+    
+    //Calculando PIB per Capita
+    printf("\n\n================================\n");
+    printf("CALCULANDO PIB PER CAPITA\n");
+    gdpPerCapita = gdp / population;
+    printf("PIB PER CAPITA: %f\n", gdpPerCapita);
 
     //Desafio para Novato completado com sucesso.
+    //Desafio para Aventureiro completado com sucesso.
+
     return 0;
 }
 
